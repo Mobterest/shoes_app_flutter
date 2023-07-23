@@ -105,10 +105,9 @@ class _MyAppState extends State<MyApp> {
                     shrinkWrap: true,
                     gridDelegate:
                         const SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 200,
-                            childAspectRatio: 1 / 1.3,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20),
+                      maxCrossAxisExtent: 200,
+                      childAspectRatio: 1 / 1.3,
+                    ),
                     itemCount: shoes.length,
                     itemBuilder: (BuildContext ctx, index) {
                       return Card(
@@ -186,17 +185,20 @@ class _MyAppState extends State<MyApp> {
                                         ),
                                       ),
                                       const Spacer(),
-                                      ElevatedButton(
-                                        onPressed: () {},
-                                        style: ElevatedButton.styleFrom(
-                                          foregroundColor: Colors.black,
-                                          backgroundColor:
-                                              const Color(0xff38b6ff),
-                                          shape: const CircleBorder(),
-                                          padding: const EdgeInsets.all(5),
+                                      SizedBox(
+                                        width: 50,
+                                        child: ElevatedButton(
+                                          onPressed: () {},
+                                          style: ElevatedButton.styleFrom(
+                                            foregroundColor: Colors.black,
+                                            backgroundColor:
+                                                const Color(0xff38b6ff),
+                                            shape: const CircleBorder(),
+                                            padding: const EdgeInsets.all(5),
+                                          ),
+                                          child: const Icon(Icons.add,
+                                              color: Colors.white),
                                         ),
-                                        child: const Icon(Icons.add,
-                                            color: Colors.white),
                                       )
                                     ],
                                   ),
